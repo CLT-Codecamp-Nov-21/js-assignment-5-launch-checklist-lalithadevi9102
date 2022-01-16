@@ -7,7 +7,7 @@ window.addEventListener("load", function() {
    let listedPlanetsResponse = myFetch();
    listedPlanetsResponse.then(function (result) {
     listedPlanets = pickPlanet(result);
-    addDestinationInfo(document, listedPlanets["name"], listedPlanets["diameter"], listedPlanets["star"], listedPlanets["distance"], listedPlanets["moons"], listedPlanets["image"]);
+    addDestinationInfo(document, listedPlanets.name, listedPlanets.diameter, listedPlanets.star, listedPlanets.distance, listedPlanets.moons, listedPlanets.image);
    console.log(listedPlanets);
    }).then(function () {
        console.log(listedPlanets);
