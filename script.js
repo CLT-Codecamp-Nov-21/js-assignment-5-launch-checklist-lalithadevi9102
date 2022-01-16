@@ -15,13 +15,13 @@ window.addEventListener("load", function() {
     let form = document.querySelector("#form");
     const propagation = true;
     form.addEventListener("submit", function(event){
-        let pilotNameInput = document.querySelector("div.formField input[name=pilotName]").value;
-        let copilotNameInput = document.querySelector("div.formField input[name=copilotName]").value;
-        let fuelLevelInput = document.querySelector("div.formField input[name=fuelLevel]").value;
-        let cargoMassInput = document.querySelector("div.formField input[name=cargoMass]").value;
-        if(formSubmission(document, faultyItemsElement, pilotNameInput, copilotNameInput, fuelLevelInput, cargoMassInput) === "Empty"){
+        let pilotName = document.querySelector("div.formField [name=pilotName]").value;
+        let copilotName = document.querySelector("div.formField [name=copilotName]").value;
+        let fuelLevel = document.querySelector("div.formField [name=fuelLevel]").value;
+        let cargoMass = document.querySelector("div.formField [name=cargoMass]").value;
+        if(formSubmission(document, faultyItemsElement, pilotName, copilotName, fuelLevel, cargoMass) === "Empty"){
             alert("All fields are required!");
-        }else if(formSubmission(document, faultyItemsElement, pilotNameInput, copilotNameInput, fuelLevelInput, cargoMassInput) === "Invalid"){
+        }else if(formSubmission(document, faultyItemsElement, pilotName, copilotName, fuelLevel, cargoMass) === "Invalid"){
             alert("Make sure to enter valid information for each field!");
         }
         event.preventDefault();
