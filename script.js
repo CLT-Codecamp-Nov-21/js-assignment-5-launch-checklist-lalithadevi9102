@@ -14,8 +14,8 @@ window.addEventListener("load", function() {
 
        // Below this comment call the appropriate helper functions to pick a planet fom the list of planets and add that information to your destination.
 
-       let faultyList = document.getElementById('faultyItems');
-    faultyList.style.visibility = "hidden";
+       let list = document.getElementById('faultyItems');
+    list.style.visibility = "hidden";
     let form = document.querySelector("form");
     form.addEventListener("submit", function(event) {
        
@@ -28,9 +28,9 @@ window.addEventListener("load", function() {
             formSubmission(document,list,pilot,copilot,fuelLevel,cargoLevel);
 
         event.preventDefault();
-        if(formSubmission(document, faultyList, pilot, coPilot, fuel, cargo) === "Empty"){
+        if(formSubmission(document, list, pilot, coPilot, fuel, cargo) === "Empty"){
             alert("All field values are required!");
-        }else if(formSubmission(document, faultyList, pilot, coPilot, fuel, cargo) === "Invalid"){
+        }else if(formSubmission(document, list, pilot, coPilot, fuel, cargo) === "Invalid"){
             alert("Make sure to enter valid data in each field!");
         }
     });    
